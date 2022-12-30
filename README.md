@@ -6,6 +6,9 @@
 
 [中文](docs/READEME-zh-CN.md)
 
+## whatsapp group
+![image](docs/res/multiapp_whatsapp.png)
+
 ## Project Introduction
 MultiApp is a virtual Android container, which can open more apps. This project provides a simple UI for you to experience. You can also download the official apk from [Google play](https://play.google.com/store/apps/details?id=com.waxmoon.ma.gp) to enjoy a better experience. If you are an android developer, you can also customize your own UI. You don't need to pay attention to the technical details that are difficult to understand. You can use the api provided by [opensdk](https://github.com/WaxMoon/opensdk) to open more apps. If you have any questions during the experience, you can contact us by WeChat.
 
@@ -166,6 +169,27 @@ var install: (ApkInfo)->Unit = { apkInfo ->
 }
 ```
 
+### You can also call HackApi.installApkFiles to install apk with apk file path
+
+```Java
+    /**
+     * install the apk/apks that is not installed on the system.
+     * @param apkPathOrDir if this app is a full apk file, apkPathOrDir should pass an absolute path,
+     *                     such as /sdcard/com.xx.yy/com.xx.yy.apk;
+     *
+     *                     if this app is split apk files, apkPathOrDir should pass the directory
+     *                     containing all the apk files for this app, such as /sdcard/com.xx.yy/,
+     *                     and this directory can't contain apk files that do not belong to the current app.
+     *
+     * @param userId
+     * @param forceInstall
+     * @return public static final int INSTALL_SUCCEEDED = 1;
+     */
+    public static int installApkFiles(String apkPathOrDir, int userId, boolean forceInstall) {
+        ...
+    }
+```
+
 ### Use HackApi.startActivity to run app
 
 ```Kotlin
@@ -275,3 +299,5 @@ Email: cocos_sh@sina.com
 13.fix paltalk crash
 
 14.support Application lifecycle callback(HackApi.registerApplicationCallback)
+
+15.support tiktok
