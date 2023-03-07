@@ -6,13 +6,17 @@
 
 [中文](docs/READEME-zh-CN.md)
 
-## whatsapp group
-![image](docs/res/multiapp_whatsapp.png)
+## Telegram
+https://t.me/xunijun
 
 ## Project Introduction
 MultiApp is a virtual Android container, which can open more apps. This project provides a simple UI for you to experience. You can also download the official apk from [Google play](https://play.google.com/store/apps/details?id=com.waxmoon.ma.gp) to enjoy a better experience. If you are an android developer, you can also customize your own UI. You don't need to pay attention to the technical details that are difficult to understand. You can use the api provided by [opensdk](https://github.com/WaxMoon/opensdk) to open more apps. If you have any questions during the experience, you can contact us by WeChat.
 
 In addition, we will continue to fix problems and update opensdk code to provide you with the best experience.
+
+## Best practice
+
+Maybe you can goto [here](https://github.com/WaxMoon/MultiAppDemo) and download code
 
 ### **You can watch the following videos to understand our capabilities**
 
@@ -228,6 +232,7 @@ var startApp: (ApkInfo)->Unit = { apkInfo ->
                 Slog.d(TAG, "onAttachBaseContext %s", app);
             }
 
+            @Deprecated
             @Override
             public void onInstallProviders(Application app) {
                 Slog.d(TAG, "onInstallProviders %s", app);
@@ -269,6 +274,73 @@ Wechat: WaxMoon2018
 Email: cocos_sh@sina.com
 
 ## Change Log
+### 2023/3
+1.fix twitter white screen
+
+2.fix messenger crash
+
+3.fix GP crash on Android11-13
+
+4.fix chrominum crash when alone mode
+
+5.fix zhihu cant view article
+
+6.optimize process start speed
+
+### 2023/2
+1.fix Google play login issue
+
+2.fix permission check issue
+
+3.fix pococha can't login with facebook
+
+4.fix receiver issue
+
+5.fix youtube crash
+
+6.fix App's PackageInfo signature null
+
+7.enable DeviceInfo fake, such as android_id
+
+8.add HackApi.killApplication
+
+9.fix OnePlus device crash
+
+10.fix samsung device crash
+
+11.optimize Google suite access logic
+
+12.fix mobile legends login issue
+
+13.fix tiktok crash when send video
+
+14.fix 32bit runtime crash
+
+15.optimize app startup speed
+
+16.fix startActivity issue
+
+17.add CMD_QUICK_START_ACTIVITY
+
+### 2023/1
+1.fix not response on some device
+
+2.isolate provider
+
+3.fix snapchat crash
+
+4.fix app restart when crash
+
+5.fix Google play crash
+
+6.fix firefox crash
+
+7.solve finishActivity fail
+
+8.fix coc crash when alone mode
+
+9.fix some other issues on xiaomi/motorola device
+
 
 ### 2022/12
 
@@ -299,5 +371,3 @@ Email: cocos_sh@sina.com
 13.fix paltalk crash
 
 14.support Application lifecycle callback(HackApi.registerApplicationCallback)
-
-15.support tiktok

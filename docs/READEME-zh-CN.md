@@ -4,8 +4,8 @@
 ![](https://img.shields.io/badge/Android-7.0%20--%2013-blue.svg?style=flat)
 ![](https://img.shields.io/badge/arch-armeabi--v7a%20%7C%20arm64--v8a-blue.svg?style=flat)
 
-## whatsapp群组
-![image](res/multiapp_whatsapp.png)
+## 微信群组
+请先加微信：WaxMoon2018
 
 ## 维护情况
 
@@ -15,6 +15,10 @@
 MultiApp是一款虚拟安卓容器，可实现app多开，该工程提供了一个简易的UI供您体验，您也可以下载[官网安装包](https://play.google.com/store/apps/details?id=com.waxmoon.ma.gp)享受更流畅的体验。如果您是一个android开发者，也可以自已定制UI，您不用关注底层的实现细节，使用[opensdk](https://github.com/WaxMoon/opensdk)提供的api即可实现app多开。如果您在体验过程中有任何问题，可直接咨询微信账号。
 
 另外，团队会持续修复问题以及更新opensdk，为您提供最佳的体验。
+
+## 最佳实践
+
+你可能需要到这个[项目仓库]((https://github.com/WaxMoon/MultiAppDemo))，下载并学习基本的代码
 
 ### **您可以观看如下视频了解我们的功能**
 
@@ -278,6 +282,73 @@ var startApp: (ApkInfo)->Unit = { apkInfo ->
 新浪邮箱:cocos_sh@sina.com
 
 ## 维护日志
+### 2023/3
+1.修复twitter白屏
+
+2.修复messenger免安装偶现崩溃
+
+3.修复后台GP的binder崩溃
+
+4.修复chrominum免安装崩溃
+
+5.修复知乎有时候不能查看文章
+
+6.优化进程启动速度
+
+### 2023/2
+1.修复部分软件谷歌登录失败
+
+2.修复权限检测异常
+
+3.修复pococha不能通过facebook登录
+
+4.修复广播receiver问题
+
+5.修复youtube崩溃
+
+6.修复app获取签名为空
+
+7.支持设备伪装，比如android_id
+
+8.添加接口-杀死运行中的多开应用HackApi.killApplication
+
+9.修复一加机型crash
+
+10.修复三星机型崩溃
+
+11.优化谷歌套件的访问逻辑
+
+12.修复mobile legends游戏登录问题
+
+13.修复tiktok发布视频崩溃
+
+14.修复32位机型套件安装以及crash
+
+15.优化app的启动速度
+
+16.修复startActivity问题
+
+17.添加CMD_QUICK_START_ACTIVITY
+
+### 2023/1
+1.解决部分手机无响应
+
+2.优化provider隔离
+
+3.修复snapchat崩溃
+
+4.解决应用崩溃无限重启
+
+5.解决Google play crash
+
+6.解决firefox崩溃
+
+7.解决finishActivity失败
+
+8.解决部落冲突免安装模式崩溃
+
+9.适配小米、联想机型
+
 
 ### 2022/12
 
@@ -308,6 +379,4 @@ var startApp: (ApkInfo)->Unit = { apkInfo ->
 13.修复paltalk崩溃
 
 14.支持Application lifecycle callback(HackApi.registerApplicationCallback)
-
-15.支持中国地区使用tiktok
 

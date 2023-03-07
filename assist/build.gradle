@@ -14,12 +14,16 @@ android {
         versionName rootProject.ext.versionName
 
         ndk.abiFilters 'armeabi-v7a'
+
+        if (!rootProject.ext.isMasterPkg) {
+            manifestPlaceholders = [masterPkg: "${rootProject.ext.masterPkg}"]
+        }
     }
 
     buildTypes {
         release {
             aaptOptions {
-                ignoreAssetsPattern '!com.waxmoon.ma.gp.apk:!hack.jar'
+                ignoreAssetsPattern '!com.waxmoon.ma.gp.apk:!moon.jar'
             }
             signingConfig signingConfigs.debug
             signingConfig.initWith(buildTypes.debug.signingConfig)
